@@ -19,7 +19,7 @@ def socket
 end
 
 def model
-    pod 'RealmSwift', '~> 2.10.2'
+  pod 'RealmSwift'#, '~> 2.10.2'
 end
 
 target "Potatso" do
@@ -32,7 +32,7 @@ target "Potatso" do
     pod 'MBProgressHUD'
     pod 'CallbackURLKit', :path => "./Library/CallbackURLKit"
     pod 'ICDMaterialActivityIndicatorView', '~> 0.1.0'
-    pod 'Reveal-iOS-SDK', '~> 1.6.2', :configurations => ['Debug']
+    #pod 'Reveal-iOS-SDK', '~> 1.6.2', :configurations => ['Debug']
     pod 'ICSPullToRefresh', '~> 0.6'
     pod 'ISO8601DateFormatter', '~> 0.8'
     pod 'Alamofire'
@@ -65,8 +65,10 @@ end
 target "PotatsoLibrary" do
     library
     model
+#    pod 'YAML-Framework'
+#pod 'Yaml'
     # YAML-Framework 0.0.3 is not available in cocoapods so we install it from local using git submodule
-    pod 'YAML-Framework', :path => "./Library/YAML-Framework"
+#    pod 'YAML-Framework', :path => "./Library/YAML-Framework"
 end
 
 target "PotatsoModel" do
